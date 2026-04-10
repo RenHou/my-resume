@@ -1,0 +1,35 @@
+<div class="page-wrapper">
+  <div class="page-header">
+    <span class="page-tag">What I can do</span>
+    <h1 class="page-title">Skills</h1>
+    <div class="accent-bar"></div>
+  </div>
+
+  <div class="skills-grid">
+    @for (category of skillCategories; track category.title) {
+      <div class="skill-card" [class.full-card]="category.fullWidth">
+        <div class="card-header">
+
+          <div class="card-icon" [style.background]="category.iconBg">
+            <img class="card-icon-img" [src]="category.icon" [alt]="category.title"  />
+          </div>
+          <span class="card-title">{{ category.title }}</span>
+        </div>
+        <div class="skill-list">
+          @for (skill of category.skills; track skill.name) {
+            <div class="skill-row">
+              <div class="skill-top">
+                
+                <span class="skill-name">{{ skill.name }}</span>
+                <span class="level-badge" [ngClass]="'level-' + skill.level">{{ skill.level }}</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" [ngClass]="'fill-' + skill.level"></div>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</div>

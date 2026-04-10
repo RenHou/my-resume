@@ -1,0 +1,178 @@
+.page-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2.5rem;
+}
+
+.page-header {
+    margin-bottom: 2.5rem;
+}
+
+.page-tag {
+    font-size: 15px;
+    font-weight: 500;
+    color: #534AB7;
+    background: #EEEDFE;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.page-title {
+    font-size: 32px;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin: 0.8rem 0 0.4rem;
+    letter-spacing: -0.8px;
+}
+
+.accent-bar {
+    width: 40px;
+    height: 3px;
+    background: #534AB7;
+    border-radius: 2px;
+    margin-top: 0.8rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.full-card {
+    grid-column: 1 / -1;
+}
+
+.skill-card {
+    background: #fff;
+    border: 0.5px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: border-color 0.2s ease;
+}
+
+.skill-card:hover {
+    border-color: #AFA9EC;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.2rem;
+}
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+.card-icon-img{
+    width: 30px ;
+    height: 30px;
+    object-fit: contain;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.skill-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skill-row {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.skill-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-name {
+    font-size: 17px;
+    color: #444;
+}
+
+/* Level badges */
+.level-badge {
+    font-size: 15px;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 20px;
+}
+
+.level-good {
+    background: #E1F5EE;
+    color: #085041;
+}
+
+.level-basic {
+    background: #E6F1FB;
+    color: #0C447C;
+}
+
+.level-experience {
+    background: #EEEDFE;
+    color: #3C3489;
+}
+
+.level-advance {
+    background: #FAECE7;
+    color: #712B13;
+}
+
+/* Skill bars */
+.skill-bar-bg {
+    height: 4px;
+    background: #f0f0f0;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.skill-bar-fill {
+    height: 100%;
+    border-radius: 2px;
+}
+
+.fill-good {
+    background: #1D9E75;
+    width: 80%;
+}
+
+.fill-basic {
+    background: #378ADD;
+    width: 45%;
+}
+
+.fill-experience {
+    background: #534AB7;
+    width: 65%;
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-wrapper {
+        padding: 2rem 1.2rem;
+    }
+
+    .full-card {
+        grid-column: 1;
+    }
+}

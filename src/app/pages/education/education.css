@@ -1,0 +1,161 @@
+.page-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2.5rem;
+}
+
+.page-header {
+    margin-bottom: 2.5rem;
+}
+
+.page-tag {
+    font-size: 15px;
+    font-weight: 500;
+    color: #534AB7;
+    background: #EEEDFE;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.page-title {
+    font-size: 32px;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin: 0.8rem 0 0.4rem;
+    letter-spacing: -0.8px;
+}
+
+.accent-bar {
+    width: 40px;
+    height: 3px;
+    background: #534AB7;
+    border-radius: 2px;
+    margin-top: 0.8rem;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: #EEEDFE;
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 1.8rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.4rem;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #534AB7;
+    border: 2px solid #EEEDFE;
+}
+
+/* Card */
+.edu-card {
+    background: #fff;
+    border: 0.5px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: border-color 0.2s ease;
+}
+
+.edu-card:hover {
+    border-color: #AFA9EC;
+}
+
+.edu-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.6rem;
+}
+
+.edu-school {
+    font-size: 18px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.edu-period {
+    font-size: 16px;
+    color: #534AB7;
+    background: #EEEDFE;
+    padding: 3px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.edu-degree {
+    font-size: 17px;
+    color: #666;
+    margin: 0.3rem 0 1rem;
+}
+
+/* Meta pills */
+.edu-meta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.meta-pill {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #f7f7f7;
+    border-radius: 8px;
+    padding: 6px 12px;
+}
+
+.meta-label {
+    font-size: 15px;
+    color: #aaa;
+}
+
+.meta-value {
+    font-size: 17px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.achievement-pill {
+    background: #E1F5EE;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+.achievement-text {
+    font-size: 17px;
+    font-weight: 500;
+    color: #085041;
+}
+
+@media (max-width: 768px) {
+    .page-wrapper {
+        padding: 2rem 1.2rem;
+    }
+
+    .edu-top {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

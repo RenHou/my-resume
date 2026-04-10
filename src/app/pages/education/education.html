@@ -1,0 +1,32 @@
+<div class="page-wrapper">
+  <div class="page-header">
+    <span class="page-tag">My background</span>
+    <h1 class="page-title">Education</h1>
+    <div class="accent-bar"></div>
+  </div>
+
+  <div class="timeline">
+    @for (edu of educationList; track edu.school) {
+      <div class="timeline-item">
+        <div class="edu-card">
+          <div class="edu-top">
+            <span class="edu-school">{{ edu.school }}</span>
+            <span class="edu-period">{{ edu.period }}</span>
+          </div>
+          <p class="edu-degree">{{ edu.degree }}</p>
+          <div class="edu-meta">
+            <div class="meta-pill">
+              <span class="meta-label">{{ edu.resultLabel }}</span>
+              <span class="meta-value">{{ edu.resultValue }}</span>
+            </div>
+            @if (edu.achievement) {
+              <div class="achievement-pill">
+                <span class="achievement-text">{{ edu.achievement }}</span>
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

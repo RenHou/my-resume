@@ -1,0 +1,41 @@
+<div class="page-wrapper">
+  <div class="page-header">
+    <span class="page-tag">My credentials</span>
+    <h1 class="page-title">Certifications</h1>
+    <div class="accent-bar"></div>
+  </div>
+
+  <div class="cert-grid">
+    @for (cert of certList; track cert.name) {
+      <div class="cert-card">
+        <div class="cert-top">
+          <div class="cert-icon" [style.background]="cert.iconBg">
+            <img [src]="cert.icon" [alt]="cert.name" width="40" height="40" style="object-fit:contain;" />
+          </div>
+          <div>
+            <p class="cert-name">{{ cert.name }}</p>
+            <p class="cert-issuer">{{ cert.issuer }}</p>
+          </div>
+        </div>
+
+        <div class="cert-meta">
+          @for (tag of cert.tags; track tag.label) {
+            <span class="meta-pill" [ngClass]="'pill-' + tag.color">{{ tag.label }}</span>
+          }
+        </div>
+
+        <p class="cert-desc">{{ cert.description }}</p>
+
+        <div class="cert-footer">
+          @if (cert.type === 'url') {
+            <a class="cert-link" [href]="cert.link" target="_blank">View credential</a>
+            <div class="verified-badge">Verified</div>
+          } @else if (cert.type === 'pdf') {
+            <a class="pdf-link" [href]="cert.link" target="_blank">View PDF</a>
+            <span class="cert-date">{{ cert.issuer }}</span>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</div>

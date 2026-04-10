@@ -1,0 +1,56 @@
+<div class="page-wrapper">
+  <div class="page-header">
+    <span class="page-tag">What I've built</span>
+    <h1 class="page-title">Projects</h1>
+    <div class="accent-bar"></div>
+  </div>
+
+  <div class="projects-grid">
+    @for (project of projectList; track project.name) {
+      <div class="project-card" >
+        <div class="project-main">
+          <div class="project-top">
+            <div class="project-title-row">
+              <div class="project-icon" [style.background]="project.iconBg">
+                <img [src]="project.icon" [alt]="project.name" class="project-icon-img" />
+              </div>
+              <p class="project-name">{{ project.name }}</p>
+            </div>
+            <span class="project-type">{{ project.type }}</span>
+          </div>
+          <p class="project-desc">{{ project.description }}</p>
+          <div class="tech-list">
+            @for (tech of project.techStack; track tech.label) {
+              <span class="tech-tag" [ngClass]="'tag-' + tech.color">{{ tech.label }}</span>
+            }
+          </div>
+        </div>
+
+        <div class="project-side">
+          @if (project.deliverables && project.deliverables.length > 0) {
+            <div class="deliverables-box">
+              <div class="deliverables-title">Deliverables</div>
+              @for (item of project.deliverables; track item) {
+                <div class="deliverable-item">
+                  <div class="dot"></div>{{ item }}
+                </div>
+              }
+            </div>
+          }
+          <div class="project-footer">
+            @if (project.githubUrl) {
+              <a class="github-link" [href]="project.githubUrl" target="_blank">
+                View on GitHub
+              </a>
+            } @else {
+              <span class="no-link">No link yet</span>
+            }
+            <span class="status-badge" [ngClass]="'status-' + project.status">
+              {{ project.status === 'done' ? 'Completed' : 'In Progress' }}
+            </span>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

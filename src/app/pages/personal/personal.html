@@ -1,0 +1,79 @@
+<div class="page-wrapper">
+    <div class="page-header">
+        <span class="page-tag">About me</span>
+        <h1 class="page-title">Personal information</h1>
+        <div class="accent-bar"></div>
+    </div>
+
+    <div class="two-col">
+        <!-- Left column -->
+        <div>
+            <div class="card">
+                <div class="avatar-row">
+                    <div class="avatar">{{ initials }}</div>
+                    <div>
+                        <div class="avatar-name">{{ name }}</div>
+                        <div class="avatar-role">{{ jobTitle }}</div>
+                    </div>
+                </div>
+                <div class="card-title">Basic info</div>
+                <div class="info-row">
+                    <span class="info-label">Full name</span>
+                    <span class="info-value">{{ name }}</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Age</span>
+                    <span class="info-value">{{ age }} years old</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Location</span>
+                    <span class="info-value">{{ location }}</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Nationality</span>
+                    <span class="info-value">{{ nationality }}</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">About me</div>
+                <p class="about-text">{{ about }}</p>
+            </div>
+        </div>
+
+        <!-- Right column -->
+        <div>
+            <div class="card">
+                <div class="card-title">Contact</div>
+                @for (item of contactList; track item.label) {
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <img [src]="item.icon" [alt]="item.label" width="16" height="16" />
+                    </div>
+                    <div>
+                        <div class="contact-label">{{ item.label }}</div>
+                        <div class="contact-value">{{ item.value }}</div>
+                    </div>
+                </div>
+                }
+            </div>
+
+            <div class="card">
+                <div class="card-title">Social & links</div>
+                @for (item of socialList; track item.label) {
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <img [src]="item.icon" [alt]="item.label" width="20" height="20" />
+                    </div>
+                    <div>
+                        <div class="contact-label">{{ item.label }}</div>
+                        <div class="contact-value">
+                            <a [href]="item.url" target="_blank">{{ item.value }}</a>
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
