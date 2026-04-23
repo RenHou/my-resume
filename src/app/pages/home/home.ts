@@ -11,11 +11,11 @@ import { RouterLink } from '@angular/router';
 export class Home {
   name = 'Tan Hou Ren';
   jobTitle = 'Software Developer';
-  bio = 'Passionate developer with a love for building clean, scalable web applications. Experienced in Angular, TypeScript, and modern front-end architecture.';
+  bio = 'High-achieving Computer Science undergraduate (3.96 CGPA) with hands-on experience in full-stack engineering and intelligent system design. Proficient in Spring Boot, Flutter, and React. Google AI Essentials certified.';
   yearsExp = 1;
   projectCount = 5;
-  certCount = 2;
-  photoUrl = 'images.jpeg';  // Set your image path here
+  certCount = 3;
+  photoUrl = 'images.jpeg';
 
   downloadResume() {
     window.open('assets/resume.pdf', '_blank');

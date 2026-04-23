@@ -12,8 +12,8 @@ export class Certification {
     {
       name: 'Google AI Essentials',
       issuer: 'Google · via Coursera',
-      iconBg: '#E6F1FB',
-      icon: 'google.jpeg',        
+      iconBg: '#FFFFFF',
+      icon: 'google.jpeg',
       type: 'url',
       link: 'https://www.coursera.org/account/accomplishments/specialization/D1F8XCZBS32T',
       description: 'Covers the fundamentals of AI and how to use Google\'s AI-powered tools responsibly and effectively in everyday work.',
@@ -23,12 +23,25 @@ export class Certification {
       ]
     },
     {
+      name: 'CCNA: Introduction to Networks',
+      issuer: 'Cisco Networking Academy',
+      iconBg: '#FFFFFF',
+      icon: 'cisco.png',
+      type: 'pdf',
+      link: 'CCNA-_Introduction_to_Networks_certificate.pdf',
+      description: 'Covers the fundamentals of networking, including network protocols, IP addressing, routing, and switching concepts.',
+      tags: [
+        { label: 'Networking', color: 'teal' },
+        { label: 'Cisco', color: 'blue' },
+      ]
+    },
+    {
       name: 'Introduction to Practical React',
       issuer: 'eLatih · Malaysia',
-      iconBg: '#FAECE7',
-      icon: 'elatih.png',        
+      iconBg: '#FFFFFF',
+      icon: 'elatih.png',
       type: 'pdf',
-      link: 'Introduction to React.pdf',  
+      link: 'Introduction to React.pdf',
       description: 'Introduction to building practical web applications using React, covering core concepts like components, state management, and hooks.',
       tags: [
         { label: 'React', color: 'purple' },
